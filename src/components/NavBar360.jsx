@@ -1,5 +1,3 @@
-
-
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Box, Typography, Link } from '@mui/material';
 
@@ -80,7 +78,7 @@ const CircularNavbar = () => {
             display: 'flex', 
             alignItems: 'center', 
             gap: 0.5, 
-            fontWeight: 'bold', // bold text
+            fontWeight: 'bold',
             '&:hover': { textDecoration: 'underline' } 
           }}
         >
@@ -112,7 +110,7 @@ const CircularNavbar = () => {
             '&:hover': { textDecoration: 'underline' } 
           }}
         >
-          ABOUT
+          About
         </Link>
         <Link
           href="#myskills"
@@ -121,14 +119,90 @@ const CircularNavbar = () => {
         
           sx={{ 
             cursor: 'pointer', 
-            fontWeight: 'bold', // bold text
+            fontWeight: 'bold',
             '&:hover': { textDecoration: 'underline' } 
           }}
         >
-          MY SKILLS
+          My Skills
         </Link>
       </Box>
-
+      <Box
+  className="left-center-feats"
+  sx={{
+    position: 'absolute',
+    top: '50%',
+    left: 'calc(1rem + 2vw)',
+    transform: 'rotate(-90deg) translateY(-50%)',
+    transformOrigin: 'left center',
+    zIndex: 1,
+  }}
+>
+  <Link
+    href="/blog"
+    underline="none"
+    color="inherit"
+    sx={{
+      fontWeight: 'bold',
+      fontSize: '1.2rem',
+      
+      color: 'black',
+      '&:hover': { textDecoration: 'underline' },
+    }}
+  >
+    Projects
+  </Link>
+</Box>
+  <Box
+  className="left-center-feats"
+  sx={{
+    position: 'absolute',
+    top: '30%',
+    left: 'calc(1rem + 2vw)',
+    transform: 'rotate(-90deg) translateY(-50%)',
+    transformOrigin: 'left center',
+    zIndex: 1,
+  }}
+>
+  <Link
+    href="/blog"
+    underline="none"
+    color="inherit"
+    sx={{
+      fontWeight: 'bold',
+      fontSize: '1.2rem',
+      
+      color: 'black',
+      '&:hover': { textDecoration: 'underline' },
+    }}
+  >
+    Resume
+  </Link>
+</Box>
+<Box
+  className="right-center-resume"
+  sx={{
+    position: 'absolute',
+    top: '50%',
+    right: 'calc(1rem + 2vw)', // mirror of left
+    transform: 'rotate(90deg) translateY(-50%)', // flipped rotation
+    transformOrigin: 'right center',
+    zIndex: 1,
+  }}
+>
+  <Link
+    href="/resume"
+    underline="none"
+    color="inherit"
+    sx={{
+      fontWeight: 'bold',
+      fontSize: '1.2rem',
+      color: 'black',
+      '&:hover': { textDecoration: 'underline' },
+    }}
+  >
+    Features
+  </Link>
+</Box>
     </div>
   );
 };
