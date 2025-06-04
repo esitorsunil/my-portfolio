@@ -1,0 +1,10 @@
+* {
+    background: rgb(252, 246, 244);
+}
+
+.home-container {
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
