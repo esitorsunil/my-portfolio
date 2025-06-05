@@ -4,6 +4,7 @@ import Skills from './pages/Skills';
 import Project from './pages/Project';
 import Features from './pages/Features';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/features" element={<Features />} />
+         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
