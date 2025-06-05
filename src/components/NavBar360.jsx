@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { Box, Typography, IconButton, Link } from '@mui/material';
+import { Box, Typography, IconButton, Link} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { Link as RouterLink } from 'react-router-dom';
 
 const CircularNavbar = () => {
   const [visible, setVisible] = useState(false);
@@ -12,15 +11,12 @@ const CircularNavbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(true);
-    }, 200); // 0.2 seconds delay
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div
-    
-    >
-      {/* Top-left ES */}
+    <div>
       <Box
         className="top-left-logo"
         sx={{
@@ -33,9 +29,7 @@ const CircularNavbar = () => {
           cursor: 'default',
           color: '#333',
           mt: 1,
-          transform: visible ? 'translateY(0)' : 'translateY(-30px)',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
+          
           '@media (max-width: 600px)': {
             top: 10,
             left: 10,
@@ -77,11 +71,10 @@ const CircularNavbar = () => {
         }}
       >
         <Link>
-          <ArrowBackIosNewIcon fontSize="medium" sx={{ cursor: 'pointer', color: 'black' }} />
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/circled-left-2.png" alt="circled-left-2"/>
         </Link>
       </Box>
 
-      {/* Top-right Say Hi */}
       <Box
         className="top-right-hi"
         sx={{
@@ -118,7 +111,6 @@ const CircularNavbar = () => {
         </Link>
       </Box>
 
-      {/* Bottom-center nav links */}
       <Box
         className="bottom-center-links"
         sx={{
@@ -140,11 +132,42 @@ const CircularNavbar = () => {
           },
         }}
       >
-        <Link href="#about" underline="none" color="inherit" sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}>About</Link>
-        <Link href="#myskills" underline="none" color="inherit" sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}>Skills</Link>
+         <Link
+  to="/about"
+  component={RouterLink}
+  underline="none"
+  color="inherit"
+  sx={{
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    '&:hover': {
+      textDecoration: 'underline',
+      color: '#1976d2', // optional hover color
+    },
+  }}
+>
+  About
+</Link>
+         <Link
+  to="/skills"
+  component={RouterLink}
+  underline="none"
+  color="inherit"
+  sx={{
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    '&:hover': {
+      textDecoration: 'underline',
+      color: '#1976d2', // optional hover color
+    },
+  }}
+>
+  Skills
+</Link>
       </Box>
 
-      {/* Left vertical Resume */}
       <Box
         sx={{
           position: 'absolute',
@@ -164,7 +187,6 @@ const CircularNavbar = () => {
         </Link>
       </Box>
 
-      {/* Left vertical Projects */}
       <Box
         sx={{
           position: 'absolute',
@@ -179,12 +201,25 @@ const CircularNavbar = () => {
           zIndex: 1,
         }}
       >
-        <Link href="/blog" underline="none" color="inherit" sx={{ fontSize: '1.5rem', color: 'black', '&:hover': { textDecoration: 'underline' } }}>
-          Projects
-        </Link>
+     <Link
+  to="/projects"
+  component={RouterLink}
+  underline="none"
+  color="inherit"
+  sx={{
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    '&:hover': {
+      textDecoration: 'underline',
+      color: '#1976d2', // optional hover color
+    },
+  }}
+>
+  Projects
+</Link>
       </Box>
 
-      {/* Right vertical Features */}
       <Box
         sx={{
           position: 'absolute',
@@ -199,12 +234,25 @@ const CircularNavbar = () => {
           zIndex: 1,
         }}
       >
-        <Link href="/resume" underline="none" color="inherit" sx={{ fontSize: '1.5rem', color: 'black', '&:hover': { textDecoration: 'underline' } }}>
-          Features
-        </Link>
+         <Link
+  to="/features"
+  component={RouterLink}
+  underline="none"
+  color="inherit"
+  sx={{
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    '&:hover': {
+      textDecoration: 'underline',
+      color: '#1976d2', // optional hover color
+    },
+  }}
+>
+  Features
+</Link>
       </Box>
 
-      {/* Bottom-left social icons */}
       <Box
         sx={{
           position: 'fixed',
