@@ -53,205 +53,254 @@ const CircularNavbar = () => {
 
       {/* Top-center Back Arrow (no transform) */}
       <Box
-        className="top-center-back"
-        sx={{
-          position: 'absolute',
-          top: 20,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          alignItems: 'center',
-          fontSize: '1.2rem',
-          color: '#333',
-          mt: 2,
-          fontWeight: 'bold',
-          '@media (max-width: 600px)': {
-            top: 10,
-          },
-        }}
-      >
-        <Link>
-          <img width="50" height="50" src="https://img.icons8.com/ios/50/circled-left-2.png" alt="circled-left-2"/>
-        </Link>
-      </Box>
-
-      <Box
-        className="top-right-hi"
-        sx={{
-          position: 'absolute',
-          top: 20,
-          right: 20,
-          display: 'flex',
-          alignItems: 'center',
-          fontSize: '1.2rem',
-          color: '#333',
-          mt: 2,
-          transform: visible ? 'translateY(0)' : 'translateY(-30px)',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
-          '@media (max-width: 600px)': {
-            top: 10,
-            right: 10,
-          },
-        }}
-      >
-        <Link
-          href="mailto:sunil.esitor@gmail.com"
-          underline="none"
-          color="inherit"
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 0.5,
-            fontWeight: 'bold',
-            '&:hover': { textDecoration: 'underline' },
-          }}
-        >
-          Say hi...
-        </Link>
-      </Box>
-
-      <Box
-        className="bottom-center-links"
-        sx={{
-          position: 'absolute',
-          bottom: 30,
-          left: '50%',
-          transform: visible
-            ? 'translateX(-50%) translateY(0)'
-            : 'translateX(-50%) translateY(40px)',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
-          display: 'flex',
-          gap: 30,
-          fontSize: '1.5rem',
-          color: '#333',
-          '@media (max-width: 600px)': {
-            gap: 16,
-            fontSize: '1.2rem',
-          },
-        }}
-      >
-         <Link
-  to="/about"
-  component={RouterLink}
-  underline="none"
-  color="inherit"
+  className="top-center-back"
   sx={{
-    color: 'black',
-    textDecoration: 'none',
-    fontSize: '1.5rem',
-    '&:hover': {
-      textDecoration: 'underline',
-      color: '#1976d2', // optional hover color
+    position: 'absolute',
+    top: 20,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: '1.2rem',
+    color: '#333',
+    mt: 2,
+    fontWeight: 'bold',
+    '@media (max-width: 600px)': {
+      top: 10,
     },
   }}
 >
-  About
-</Link>
-         <Link
-  to="/skills"
-  component={RouterLink}
-  underline="none"
-  color="inherit"
+  <Link href="#" underline="none">
+    <Box
+      component="img"
+      src="https://img.icons8.com/ios/50/circled-left-2.png"
+      alt="Back"
+      width={50}
+      height={50}
+      sx={{
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.3)',
+          borderRadius: '50%', // optional: smooth round shadow
+          transform: 'scale(1.05)',
+        },
+      }}
+    />
+  </Link>
+</Box>
+
+      <Box
+  className="top-right-hi"
   sx={{
-    color: 'black',
-    textDecoration: 'none',
-    fontSize: '1.5rem',
-    '&:hover': {
-      textDecoration: 'underline',
-      color: '#1976d2', // optional hover color
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: '1.2rem',
+    color: '#333',
+    mt: 2,
+    transform: visible ? 'translateY(0)' : 'translateY(-30px)',
+    opacity: visible ? 1 : 0,
+    transition: 'all 1.2s ease',
+    '@media (max-width: 600px)': {
+      top: 10,
+      right: 10,
     },
   }}
 >
-  Skills
-</Link>
-      </Box>
+  <Link
+    href="mailto:sunil.esitor@gmail.com"
+    underline="none"
+    color="inherit"
+    sx={{
+      display: 'inline-flex',      // flex for transform to work nicely
+      alignItems: 'center',
+      gap: 0.5,
+      fontWeight: 'bold',
+      transition: 'transform 0.3s ease',  // smooth zoom
+      '&:hover': {
+        textDecoration: 'none',
+        transform: 'scale(1.2)',  // zoom on hover
+      },
+    }}
+  >
+    Say hi...
+  </Link>
+</Box>
+
 
       <Box
-        sx={{
-          position: 'absolute',
-          top: '30%',
-          left: 'calc(1rem + 2vw)',
-          transform: visible
-            ? 'rotate(-90deg) translateY(-50%)'
-            : 'rotate(-90deg) translateY(-80%)',
-          transformOrigin: 'left center',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
-          zIndex: 1,
-        }}
-      >
-        <Link href="/resume" underline="none" color="inherit" sx={{ fontSize: '1.5rem', color: 'black', '&:hover': { textDecoration: 'underline' } }}>
-          Resume
-        </Link>
-      </Box>
-
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          left: 'calc(1rem + 2vw)',
-          transform: visible
-            ? 'rotate(-90deg) translateY(-50%)'
-            : 'rotate(-90deg) translateY(-80%)',
-          transformOrigin: 'left center',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
-          zIndex: 1,
-        }}
-      >
-     <Link
-  to="/projects"
-  component={RouterLink}
-  underline="none"
-  color="inherit"
+  className="bottom-center-links"
   sx={{
-    color: 'black',
-    textDecoration: 'none',
+    position: 'absolute',
+    bottom: 30,
+    left: '50%',
+    transform: visible
+      ? 'translateX(-50%) translateY(0)'
+      : 'translateX(-50%) translateY(40px)',
+    opacity: visible ? 1 : 0,
+    transition: 'all 1.2s ease',
+    display: 'flex',
+    gap: 30,
     fontSize: '1.5rem',
-    '&:hover': {
-      textDecoration: 'underline',
-      color: '#1976d2', // optional hover color
+    color: '#333',
+    '@media (max-width: 600px)': {
+      gap: 16,
+      fontSize: '1.2rem',
     },
   }}
 >
-  Projects
-</Link>
-      </Box>
+  <Link
+    to="/about"
+    component={RouterLink}
+    underline="none"
+    color="inherit"
+    sx={{
+      color: 'black',
+      textDecoration: 'none',
+      fontSize: '1.5rem',
+      transition: 'transform 0.3s ease, color 0.3s ease', // smooth transition
+      '&:hover': {
+        textDecoration: 'none',
+        transform: 'scale(1.2)',  // zoom on hover
+      },
+    }}
+  >
+    About
+  </Link>
 
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          right: 'calc(1rem + 2vw)',
-          transform: visible
-            ? 'rotate(90deg) translateY(-50%)'
-            : 'rotate(90deg) translateY(-80%)',
-          transformOrigin: 'right center',
-          opacity: visible ? 1 : 0,
-          transition: 'all 1.2s ease',
-          zIndex: 1,
-        }}
-      >
-         <Link
-  to="/features"
-  component={RouterLink}
-  underline="none"
-  color="inherit"
+  <Link
+    to="/skills"
+    component={RouterLink}
+    underline="none"
+    color="inherit"
+    sx={{
+      color: 'black',
+      textDecoration: 'none',
+      fontSize: '1.5rem',
+      transition: 'transform 0.3s ease, color 0.3s ease', // smooth transition
+      '&:hover': {
+        textDecoration: 'none',
+        transform: 'scale(1.2)',  // zoom on hover
+      },
+    }}
+  >
+    Skills
+  </Link>
+</Box>
+
+     <Box
   sx={{
-    color: 'black',
-    textDecoration: 'none',
-    fontSize: '1.5rem',
-    '&:hover': {
-      textDecoration: 'underline',
-      color: '#1976d2', // optional hover color
-    },
+    position: 'absolute',
+    top: '30%',
+    left: 'calc(1rem + 2vw)',
+    transform: visible
+      ? 'rotate(-90deg) translateY(-50%)'
+      : 'rotate(-90deg) translateY(-80%)',
+    transformOrigin: 'left center',
+    opacity: visible ? 1 : 0,
+    transition: 'all 1.2s ease',
+    zIndex: 1,
   }}
 >
-  Features
-</Link>
-      </Box>
+  <Link
+    href="/Sunil.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    underline="none"
+    color="inherit"
+    sx={{
+      fontSize: '1.5rem',
+      color: 'black',
+      display: 'inline-block', // needed to apply transform on inline element
+      transition: 'transform 0.3s ease, color 0.3s ease',
+      '&:hover': {
+        textDecoration: 'none',
+        transform: 'scale(1.2)',
+      },
+    }}
+  >
+    Resume
+  </Link>
+</Box>
+   <Box
+  sx={{
+    position: 'absolute',
+    top: '50%',
+    left: 'calc(1rem + 2vw)',
+    transform: visible
+      ? 'rotate(-90deg) translateY(-50%)'
+      : 'rotate(-90deg) translateY(-80%)',
+    transformOrigin: 'left center',
+    opacity: visible ? 1 : 0,
+    transition: 'all 1.2s ease',
+    zIndex: 1,
+  }}
+>
+  <Box
+    sx={{
+      display: 'inline-block',
+      transition: 'transform 0.3s ease',
+      '&:hover': {
+        transform: 'scale(1.2)',
+      },
+    }}
+  >
+    <Link
+      to="/projects"
+      component={RouterLink}
+      underline="none"
+      color="inherit"
+      sx={{
+        color: 'black',
+        textDecoration: 'none',
+        fontSize: '1.5rem',
+      }}
+    >
+      Projects
+    </Link>
+  </Box>
+</Box>
+
+     <Box
+  sx={{
+    position: 'absolute',
+    top: '50%',
+    right: 'calc(1rem + 2vw)',
+    transform: visible
+      ? 'rotate(90deg) translateY(-50%)'
+      : 'rotate(90deg) translateY(-80%)',
+    transformOrigin: 'right center',
+    opacity: visible ? 1 : 0,
+    transition: 'all 1.2s ease',
+    zIndex: 1,
+  }}
+>
+  <Box
+    sx={{
+      display: 'inline-block',
+      transition: 'transform 0.3s ease',
+      '&:hover': {
+        transform: 'scale(1.2)',
+      },
+    }}
+  >
+    <Link
+      to="/features"
+      component={RouterLink}
+      underline="none"
+      color="inherit"
+      sx={{
+        color: 'black',
+        textDecoration: 'none',
+        fontSize: '1.5rem',
+      }}
+    >
+      Features
+    </Link>
+  </Box>
+</Box>
 
       <Box
         sx={{
