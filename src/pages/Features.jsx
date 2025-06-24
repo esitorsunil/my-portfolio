@@ -134,7 +134,7 @@ const Features = () => {
       {/* Top bar */}
       <Box sx={{
         position: 'fixed',
-        top: 0, left: 0, right: 0,
+        top: 0, left: 20, right: 0,
         height: 64, px: 3,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
        zIndex: 10 // <- higher than background and content
