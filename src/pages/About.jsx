@@ -244,7 +244,7 @@ const About = () => {
     height: 'auto',
    
     zIndex: 3,
-    animation: 'float 6s ease-in-out infinite',
+    animation: 'float 2s ease-in-out infinite',
   }}
 />
 

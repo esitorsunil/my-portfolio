@@ -295,7 +295,7 @@ const CircularNavbar = () => {
         fontSize: '1.5rem',
       }}
     >
-      Features
+      Feat
     </Link>
   </Box>
 </Box>

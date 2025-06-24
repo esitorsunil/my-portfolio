@@ -5,53 +5,13 @@ import SocialLinks from '../components/SocialLinks';
 import { useEffect, useState } from 'react';
 
 const codingCards = [
-  {
-    title: 'React and Redux Toolkit',
-    href: 'https://namastedev.com/sunil.esitor/certificates/namaste-react',
-    tags: ['#openai', '#codesplitting', '#customhooks'],
-    note: 'NamasteDev.com Certification.',
-    bgColor: '#e0e0e0',
-    img: 'https://do6gp1uxl3luu.cloudfront.net/course_certificates/namaste_react_certificate.webp',
-  },
-  {
-    title: 'Responsive Web Design',
-    href: 'https://www.freecodecamp.org/certification/fcca6592d20-67bf-447a-89b2-359ebb20d0de/responsive-web-design',
-    tags: ['#css', '#300hours', '#freecodecamp'],
-    note: 'Developer certification on Dec 15, 2023.',
-    bgColor: '#e0e0e0',
-    img: 'https://th.bing.com/th/id/OIP.x4z_ZICDjkXYB7A2ee0UNAHaDH?rs=1&pid=ImgDetMain',
-  },
-  {
-    title: ' The Complete Full-Stack Bootcamp',
-    href: 'https://www.udemy.com/certificate/UC-edaf396f-2a8b-442c-bfba-a7f17a216fbf/',
-    tags: ['#mern', '#javascript', '#react'],
-    note: 'Udemy Certification - May 20, 2023.',
-    bgColor: '#e0e0e0',
-    img: 'https://udemy-certificate.s3.amazonaws.com/image/UC-edaf396f-2a8b-442c-bfba-a7f17a216fbf.jpg?v=1684581313000',
-  },
-  {
-    title: 'Git Training',
-    href: 'https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI3NTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl81MDQ2MzAyXzE3MTMwOTUwOTIucG5nIiwidXNlcm5hbWUiOiJFU0lUT1IgU1VOSUwgTSBBIn0&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2Fthumb_5046302_1713095092.png&_branch_match_id=1011647527857613791&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1jerSk%2FzMDEL9fVMsq8rSk1LLSrKzEuPTyrKLy9OLbJ1TUlPBQAAYS7lOwAAAA%3D%3D',
-    tags: ['#git', '#github', '#simplilearn'],
-    note: 'Apr 14, 2024',
-    bgColor: '#e0e0e0',
-    img: 'https://certificates.simplicdn.net/share/thumb_5046302_1713095092.png',
-  },
-  {
+   {
     title: 'The Complete JavaScript Course',
     href: 'https://www.tcsion.com/courses/development-island/the-complete-javascript-course-build-a-professional-project/',
     tags: ['#js', '#tcs', '#core'],
     note: 'May 30, 2024',
     bgColor: '#e0e0e0',
     img: '../../public/assests/images/txs.png',
-  },
-  {
-    title: 'Accent Technosoft - ReactJS Intern',
-    href: 'https://www.accenttechnosoft.com/',
-    tags: ['#js', '#css', '#react'],
-    note: 'Worked as a Frontend Developer Netlify, Github and SEO Optimization.',
-    bgColor: '#e0e0e0',
-    img: 'https://www.accenttechnosoft.com/images/logo_old.png',
   },
   {
     title: 'PSS - ReactJS Intern',
@@ -69,6 +29,31 @@ const codingCards = [
     bgColor: '#e0e0e0',
     img: '../../public/assests/images/banner2.jpg',
   },
+   {
+    title: 'Core JavaScript',
+    href: 'https://github.com/esitorsunil/namastejavascript',
+    tags: ['#debounce', '#promise', '#async'],
+    note: 'Core Concepts in JS including the tricky ones like Closures, Prototypal Inheritance, Promise, Event Loop, etc.',
+    bgColor: '#e0e0e0',
+    img: 'https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png',
+  },
+  {
+    title: 'React and Redux Toolkit',
+    href: 'https://namastedev.com/sunil.esitor/certificates/namaste-react',
+    tags: ['#openai', '#codesplitting', '#customhooks'],
+    note: 'NamasteDev.com Certification.',
+    bgColor: '#e0e0e0',
+    img: 'https://do6gp1uxl3luu.cloudfront.net/course_certificates/namaste_react_certificate.webp',
+  },
+
+  {
+    title: ' The Complete Full-Stack Bootcamp',
+    href: 'https://www.udemy.com/certificate/UC-edaf396f-2a8b-442c-bfba-a7f17a216fbf/',
+    tags: ['#mern', '#javascript', '#react'],
+    note: 'Udemy Certification - May 20, 2023.',
+    bgColor: '#e0e0e0',
+    img: 'https://udemy-certificate.s3.amazonaws.com/image/UC-edaf396f-2a8b-442c-bfba-a7f17a216fbf.jpg?v=1684581313000',
+  },
   {
     title: 'MCA - Computer Applications',
     href: 'https://hicas.ac.in/',
@@ -77,14 +62,36 @@ const codingCards = [
     bgColor: '#e0e0e0',
     img: 'https://gyaanarth.com/wp-content/uploads/2021/09/HICAS-Logo-1024x1024.jpg',
   },
+  
+ 
   {
-    title: 'Core JavaScript',
-    href: 'https://github.com/esitorsunil/namastejavascript',
-    tags: ['#debounce', '#promise', '#async'],
-    note: 'Core Concepts in JS including the tricky ones like Closures, Prototypal Inheritance, Promise, Event Loop, etc.',
+    title: 'Accent Technosoft - ReactJS Intern',
+    href: 'https://www.accenttechnosoft.com/',
+    tags: ['#js', '#css', '#react'],
+    note: 'Worked as a Frontend Developer Netlify, Github and SEO Optimization.',
     bgColor: '#e0e0e0',
-    img: 'https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png',
+    img: 'https://www.accenttechnosoft.com/images/logo_old.png',
   },
+  
+  
+  
+    {
+    title: 'Responsive Web Design',
+    href: 'https://www.freecodecamp.org/certification/fcca6592d20-67bf-447a-89b2-359ebb20d0de/responsive-web-design',
+    tags: ['#css', '#300hours', '#freecodecamp'],
+    note: 'Developer certification on Dec 15, 2023.',
+    bgColor: '#e0e0e0',
+    img: 'https://th.bing.com/th/id/OIP.x4z_ZICDjkXYB7A2ee0UNAHaDH?rs=1&pid=ImgDetMain',
+  },
+  {
+    title: 'Git Training',
+    href: 'https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI3NTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl81MDQ2MzAyXzE3MTMwOTUwOTIucG5nIiwidXNlcm5hbWUiOiJFU0lUT1IgU1VOSUwgTSBBIn0&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2Fthumb_5046302_1713095092.png&_branch_match_id=1011647527857613791&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1jerSk%2FzMDEL9fVMsq8rSk1LLSrKzEuPTyrKLy9OLbJ1TUlPBQAAYS7lOwAAAA%3D%3D',
+    tags: ['#git', '#github', '#simplilearn'],
+    note: 'Apr 14, 2024',
+    bgColor: '#e0e0e0',
+    img: 'https://certificates.simplicdn.net/share/thumb_5046302_1713095092.png',
+  },
+ 
 ];
 
 
@@ -180,7 +187,7 @@ const Features = () => {
     sx={{
       position: 'fixed',
       top: '0.1rem',
-      left: '5rem',
+      left: '6rem',
       color: 'rgba(0, 0, 0, 0.2)',
       fontSize: 'calc(3rem + 3vw)',
       zIndex: 0,
@@ -218,18 +225,17 @@ const Features = () => {
   target="_blank"
   underline="none"
   sx={{
-    width: 380,
+    width: 400,
     height: 350,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     p: 2,
-    borderRadius: 2,
-    boxShadow: 2,
+    borderRadius: 1,
     transition: 'transform 0.3s ease',
     '&:hover': { transform: 'scale(1.02)' },
     overflow: 'hidden',
-    border: '2px solid black', // ✅ Added border
+    border: '1px solid black', // ✅ Added border
   }}
 >
       <Box
