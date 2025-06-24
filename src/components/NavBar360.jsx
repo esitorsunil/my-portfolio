@@ -9,7 +9,7 @@ const CircularNavbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(true);
-    }, 200);
+    }, 900);
     return () => clearTimeout(timer);
   }, []);
 
