@@ -175,7 +175,7 @@ const About = () => {
             position: 'fixed',
             top: '0.1rem',
             left: '5rem',
-            color: 'rgba(255, 255, 255, 0.08)',
+            color: 'rgba(252, 246, 244, 0.2);',
             fontSize: 'calc(3rem + 3vw)',
             zIndex: 1,
             fontWeight: 'bold',
@@ -193,7 +193,7 @@ const About = () => {
             border: '2px solid rgb(252, 246, 244)',
             color: 'rgb(252, 246, 244)',
             padding: '2rem',
-            width: '50vw',
+            width: '45vw',
             height: '60vh',
             zIndex: 3,
             lineHeight: 1.5,
@@ -227,21 +227,22 @@ const About = () => {
     position: 'absolute',
     top: {
       xs: '5rem',        // mobile: move above the bio box
-      md: '10rem'        // desktop: keep original
+      md: '7rem'        // desktop: keep original
     },
     right: {
       xs: 'auto',        // mobile: center horizontally
       md: 'calc(0.5rem + 5vw)' // desktop: keep original
     },
     left: {
-      xs: 'calc(85% - 50px)', // mobile: center by offsetting half width
-      md: 'auto'
+      xs: 'calc(85% - 30px)', // mobile: center by offsetting half width
+      md: 'calc(95% - 10px)'
     },
     width: {
       xs: '100px',       // mobile: smaller
-      md: '260px'        // desktop: original
+      md: '380px'        // desktop: original
     },
     height: 'auto',
+   
     zIndex: 3,
     animation: 'float 6s ease-in-out infinite',
   }}
