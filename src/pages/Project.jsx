@@ -6,44 +6,44 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const projects = [
   {
-    title: 'KryptoGiffy',
-    description: 'A blockchain platform for sending crypto transactions using Ethereum testnets.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/hareesh-e153f.appspot.com/o/projects%2Fkryptogiffy.jpg?alt=media&token=b642f131-cdda-4378-9d2b-7f8770b1e671',
-    tags: ['#Ropsten', '#Goerli', '#Ethereum', '#Web 3.0'],
-    liveLink: 'https://kryptogiffy.web.app/',
-    githubLink: 'https://github.com/hareesh-r/KryptoGiffy',
+    title: 'Document Template',
+    description: 'Built a dynamic web editor in 3 days during my internship, tailored for generating various official documents. Included API-driven labels, and PDF export — meeting company needs and doubling user engagement.',
+    image: '../../public/assests/images/project5.png',
+    tags: ['#React', '#Redux', '#WebEditor', '#Bootstrap'],
+    liveLink: 'https://hrms-document.netlify.app/',
+    githubLink: 'https://github.com/esitorsunil/keka',
   },
   {
     title: 'Netflix GPT',
-    description: 'AI-powered Netflix interface with real-time movie recommendations and TMDB + OpenAI APIs.',
-    image: 'https://via.placeholder.com/300x180?text=Netflix+GPT',
-    tags: ['#OpenAI', '#TMDB', '#Firebase', '#React'],
-    liveLink: 'https://netflix-gpt-demo.web.app/',
-    githubLink: 'https://github.com/yourname/netflix-gpt',
+    description: 'AI-powered Netflix interface with real-time movie recommendations and TMDB + OpenAI APIs and multi-lang.',
+    image: '../../public/assests/images/project1.png',
+    tags: ['#React', '#OpenAI', '#JavaScript', '#Firebase',  '#Redux'],
+    liveLink: 'https://sunny-tanuki-d21a48.netlify.app/',
+    githubLink: 'https://github.com/esitorsunil/netflix-gpt',
   },
   {
-    title: 'Travel Advisor',
-    description: 'Search hotels, restaurants, and attractions with real-time weather and maps.',
-    image: 'https://via.placeholder.com/300x180?text=Travel+Advisor',
-    tags: ['#RapidAPI', '#Google Maps', '#React', '#Weather'],
-    liveLink: 'https://travel-advisor-demo.web.app/',
-    githubLink: 'https://github.com/yourname/travel-advisor',
+    title: 'E-Commerce',
+    description: 'Built an e-commerce site with search, filters, wishlist, and a unique surprise gift-packed shipping option, plus a multi-step scrollable order confirmation flow for smooth checkout. ',
+    image: '../../public/assests/images/project2.png',
+    tags: ['#API', '#ContextAPI', '#React', '#Bootstrap'],
+    liveLink: 'https://powerlook-shopcart.netlify.app/',
+    githubLink: 'https://github.com/esitorsunil/ecommercee',
   },
   {
     title: 'Recipe Finder',
     description: 'Search and view recipes by ingredients using TheMealDB API.',
-    image: 'https://via.placeholder.com/300x180?text=Recipe+App',
-    tags: ['#React', '#TheMealDB', '#API', '#Search'],
+    image: '../../public/assests/images/project3.png',
+    tags: ['#React', '#TheMealDB', '#Responsive', '#Search'],
     liveLink: 'https://recipe-app-demo.web.app/',
-    githubLink: 'https://github.com/yourname/recipe-app',
+    githubLink: 'https://app.netlify.com/projects/findfood-receipe/overview',
   },
   {
-    title: 'Ride Booking App',
+    title: 'Zoom Task',
     description: 'Uber-like app to book rides, track location, and manage timesheets.',
-    image: 'https://via.placeholder.com/300x180?text=Ride+Booking',
+    image: '../../public/assests/images/project6.png',
     tags: ['#React', '#Leaflet', '#Redux', '#Tracking'],
     liveLink: 'https://ride-app-demo.web.app/',
-    githubLink: 'https://github.com/yourname/ride-app',
+    githubLink: 'https://github.com/esitorsunil/task-manager',
   },
   {
     title: 'Task Manager',
@@ -122,13 +122,13 @@ const Project = () => {
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <li className="boOfnS">
-                    <Typography variant="h6" fontWeight="bold">{proj.title}</Typography>
-                    <Typography variant="body2">{proj.description}</Typography>
+                    <Typography variant="h5" fontWeight="bold">{proj.title}</Typography>
+                    <Typography variant="body1" fontWeight="540">{proj.description}</Typography>
                   </li>
                 </div>
                 <div className="flip-card-back">
                   <li className="boOfnS">
-                    <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '50%', borderRadius: '10px', objectFit: 'cover',   }} />
+                    <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '50%', borderRadius: '10px', objectFit: 'fit',   }} />
                     <Box sx={{ mt: 1, display: 'flex', gap: 1, flexWrap: 'wrap', borderTop: '2px solid white' }}>
   {proj.tags.map((tag, i) => (
     <Typography
