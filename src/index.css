@@ -10,3 +10,123 @@ body, html {
   display: none;
 }
 
+ul {
+  padding: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 320px;
+  perspective: 1000px;
+  padding-right: 50px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.boOfnS {
+  background-color: rgb(252, 246, 244);
+  color: black;
+  padding: 1.5rem;
+  border-radius: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  border: 1px solid #000;
+}
+
+/* Horizontal scroll container */
+.items {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  gap: 4rem;
+  padding: 2rem 6rem;
+  cursor: grab;
+  scroll-behavior: smooth;
+  transform: scale(0.98);
+  user-select: none;
+  margin: 0;
+  padding: 100px;
+}
+
+.jKLUHq {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Flip card styles */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 100%;
+  perspective: 1000px;
+  flex: 0 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.boOfnS {
+  background-color: rgb(252, 246, 244);
+  color: black;
+  padding: 1.5rem;
+  border-radius: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  border: 1px solid #000;
+}
