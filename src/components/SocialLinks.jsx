@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, IconButton, Link } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import { keyframes } from '@emotion/react';
 
 const fadeInUpZoom = keyframes`

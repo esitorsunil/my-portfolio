@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { Box, Typography, IconButton, Chip, Link } from '@mui/material';
+import { Box, Typography, IconButton, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const projects = [
   {
@@ -57,6 +58,7 @@ const projects = [
 const Project = () => {
   useEffect(() => {
     const slider = document.getElementById('grab-scroll');
+    const svgBox = document.getElementById('rotate-svg');
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -71,6 +73,7 @@ const Project = () => {
     const handleLeaveUp = () => {
       isDown = false;
       slider.classList.remove('active');
+      if (svgBox) svgBox.style.transform = 'rotate(0deg)';
     };
 
     const handleMove = (e) => {
@@ -79,6 +82,8 @@ const Project = () => {
       const x = e.pageX - slider.offsetLeft;
       const walk = (x - startX) * 2;
       slider.scrollLeft = scrollLeft - walk;
+
+      if (svgBox) svgBox.style.transform = 'rotate(180deg)';
     };
 
     slider.addEventListener('mousedown', handleDown);
@@ -107,7 +112,7 @@ const Project = () => {
         </IconButton>
       </Box>
 
-      <Box sx={{ pt: 10, px: 4, maxWidth: 1800, margin: '0', position: 'relative', zIndex: 2, color: '#000', marginBottom: '0px' }}>
+      <Box sx={{ pt: 10, px: 4, maxWidth: 1800, margin: '0', position: 'relative', zIndex: 2, color: '#000' }}>
         <Box component="h1" sx={{ position: 'fixed', top: '0.1rem', left: '6rem', color: 'rgba(252, 246, 244, 0.2)', fontSize: 'calc(3rem + 3vw)', zIndex: 0, fontWeight: 'bold', fontFamily: "'Dancing Script', cursive" }}>
           WORK
         </Box>
@@ -126,19 +131,52 @@ const Project = () => {
                   </li>
                 </div>
                 <div className="flip-card-back">
-                  <li className="boOfnS">
-                    <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '50%', borderRadius: '10px', objectFit: 'cover' }} />
+                  <li className="boOfnS" style={{ backgroundColor: 'black', border: '1px solid white', color: 'white' }}>
+                    <img
+                      src={proj.image}
+                      alt={proj.title}
+                      style={{
+                        width: '100%',
+                        height: '50%',
+                        borderRadius: '10px',
+                        objectFit: 'cover',
+                        borderBottom: '2px solid white'
+                      }}
+                    />
                     <Box sx={{ mt: 1, display: 'flex', gap: 1, flexWrap: 'wrap' }}>
                       {proj.tags.map((tag, i) => (
-                        <Chip key={i} label={tag} size="small" />
+                        <Typography
+                          key={i}
+                          sx={{
+                            marginRight: "0.5rem",
+                            fontSize: 'calc(0.6em + 0.3vw)',
+                            paddingTop: "8px",
+                            color: 'white',
+                          }}
+                        >
+                          {tag}
+                        </Typography>
                       ))}
                     </Box>
                     <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
-                      <Link href={proj.liveLink} target="_blank" underline="hover">Visit</Link>
+                      <Link
+                        href={proj.liveLink}
+                        target="_blank"
+                        underline="none"
+                        sx={{
+                          color: 'rgba(0, 0, 0, 0.8) !important',
+                          backgroundColor: '#fcf6f4 !important',
+                          textDecoration: 'none',
+                          padding: '.5rem calc(2rem + 2vw)',
+                          borderRadius: '0 0 0 50px',
+                          fontSize: 'calc(1em + .5vw)',
+                          fontWeight: 500,
+                        }}
+                      >
+                        Visit
+                      </Link>
                       <Link href={proj.githubLink} target="_blank">
-                        <svg aria-hidden="true" width="25" height="25" viewBox="0 0 496 512" fill="black">
-                          <path d="M165.9 397.4c0 2-2.3..." />
-                        </svg>
+                        <GitHubIcon sx={{ fill: '#fcf6f4', fontSize: '2.2rem' }} />
                       </Link>
                     </Box>
                   </li>
@@ -147,6 +185,31 @@ const Project = () => {
             </div>
           ))}
         </ul>
+      </Box>
+
+      {/* Rotating SVG Path Icon */}
+      <Box
+        id="rotate-svg"
+        sx={{
+          position: 'fixed',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 5,
+          transform: 'rotate(0deg)',
+          transition: 'transform 0.6s ease',
+        }}
+      >
+        <svg width="40" height="40" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#FCF6F4"
+            d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248
+              248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32
+              32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96
+              96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248
+              64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32
+              14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"
+          />
+        </svg>
       </Box>
     </Box>
   );
