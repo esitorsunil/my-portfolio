@@ -7,10 +7,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const projects = [
   {
     title: 'Document Template',
-    description: 'Built a dynamic web editor in 3 days during my internship, tailored for generating various official documents. Included API-driven labels, and PDF export — meeting company needs and doubling user engagement.',
+    description: 'Built a KEKA-style document editor in 3 days during my internship, enabling swift generation of official letters and streamlining HR workflows.',
     image: '../../public/assests/images/project5.png',
     tags: ['#React', '#Redux', '#WebEditor', '#Bootstrap'],
-    liveLink: 'https://hrms-document.netlify.app/',
+    liveLink: 'https://hrms-document-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/keka',
   },
   {
@@ -21,12 +21,31 @@ const projects = [
     liveLink: 'https://sunny-tanuki-d21a48.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/netflix-gpt',
   },
+
+  {
+    title: 'Multi-lang NPM',
+    description: 'Developed and published a React npm package for real-time webpage translation with 100+ language support and original text restoration.',
+    image: '../../public/assests/images/project9.png',
+    tags: ['#React', '#NPMPublish'],
+    liveLink: 'https://multilang-sunil.netlify.app/',
+    githubLink: 'https://www.npmjs.com/package/custom-react-auto-translate-dropdown',
+  },
+
+  {
+    title: 'Google Clone',
+    description: 'Clone of Google With dark mode functionality, built with Google Custom Search API and ReactJS.',
+    image: '../../public/assests/images/project10.png',
+    tags: ['#React', '#GoogleSearchAPI', '#CSS', "#HTML"],
+    liveLink: 'https://github.com/esitorsunil/google-clone',
+    githubLink: 'https://esitorsunil.github.io/google-clone/',
+  },
+
   {
     title: 'E-Commerce',
     description: 'Built an e-commerce site with search, filters, wishlist, and a unique surprise gift-packed shipping option, plus a multi-step scrollable order confirmation flow for smooth checkout. ',
     image: '../../public/assests/images/project2.png',
     tags: ['#API', '#ContextAPI', '#React', '#Bootstrap'],
-    liveLink: 'https://powerlook-shopcart.netlify.app/',
+    liveLink: 'https://powerlook-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/ecommercee',
   },
   {
@@ -34,25 +53,34 @@ const projects = [
     description: 'Search and view recipes by ingredients using TheMealDB API.',
     image: '../../public/assests/images/project3.png',
     tags: ['#React', '#TheMealDB', '#Responsive', '#Search'],
-    liveLink: 'https://recipe-app-demo.web.app/',
+    liveLink: 'https://findfood-sunil.netlify.app/',
     githubLink: 'https://app.netlify.com/projects/findfood-receipe/overview',
   },
   {
     title: 'Zoom Task',
-    description: 'Uber-like app to book rides, track location, and manage timesheets.',
+    description: 'Recreated a company-required Zoom task module UI with full dynamic functionality using React within 2 days during my internship.',
     image: '../../public/assests/images/project6.png',
-    tags: ['#React', '#Leaflet', '#Redux', '#Tracking'],
-    liveLink: 'https://ride-app-demo.web.app/',
+    tags: ['#React', '#Zustand', '#Redux', '#Boostrap'],
+    liveLink: 'https://zoom-task-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/task-manager',
   },
   {
-    title: 'Task Manager',
-    description: 'Full-featured task management app with filter, sort, and starred tasks.',
-    image: 'https://via.placeholder.com/300x180?text=Task+Manager',
-    tags: ['#React', '#Redux', '#LocalStorage', '#Todo'],
-    liveLink: 'https://task-manager-demo.web.app/',
-    githubLink: 'https://github.com/yourname/task-manager',
+    title: 'DevTinder',
+    description: 'Built a scalable Express.js using MVC architecture with JWT-based auth and tested RESTful APIs for user, post, and notification features.',
+    image: '../../public/assests/images/project7.png',
+    tags: ['#React', '#Node', '#ExpressJS', '#MongoDB', '#Mongoose'],
+    liveLink: 'https://github.com/esitorsunil/frontend-dev',
+    githubLink: 'https://github.com/esitorsunil/dev-tinder',
   },
+  {
+    title: 'Course Platform',
+    description: 'Crafted a fully responsive course landing interface with adaptive theme toggle within 3 hours.',
+    image: '../../public/assests/images/project8.png',
+    tags: ['#HTML', '#CSS'],
+    liveLink: 'https://esitorsunil.github.io/landing-page/',
+    githubLink: 'https://github.com/esitorsunil/dev-tinder',
+  },
+  
 ];
 
 const Project = () => {
