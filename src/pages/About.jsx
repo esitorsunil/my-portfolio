@@ -207,7 +207,7 @@ const About = () => {
             top: '10rem',
             fontStyle: 'italic',
             fontFamily: '"Ubuntu Mono", monospace', // ✅ Applied as requested
-            fontStyle: 'italic', // ✅ Applied as requested
+
             
           }}
         >
@@ -235,11 +235,11 @@ const About = () => {
     },
     left: {
       xs: 'calc(85% - 30px)', // mobile: center by offsetting half width
-      md: 'calc(95% - 10px)'
+      md: 'calc(75% - 10px)'
     },
     width: {
       xs: '100px',       // mobile: smaller
-      md: '380px'        // desktop: original
+      md: '300px'        // desktop: original
     },
     height: 'auto',
    

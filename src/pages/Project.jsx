@@ -134,6 +134,15 @@ const Project = () => {
         <IconButton component={RouterLink} to="/" sx={{ color: 'white' }}>
           <Box component="img" src="https://img.icons8.com/ios-filled/50/ffffff/circled-left-2.png" alt="Back" width={50} height={50} sx={{ transition: 'all 0.3s ease', '&:hover': { boxShadow: '0px 4px 12px rgb(243, 238, 238)', borderRadius: '50%', transform: 'scale(1.05)' } }} />
         </IconButton>
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 576 512"
+  width="70"
+  height="70"
+  fill="currentColor"
+  style={{ color: 'black' }}
+>
+</svg>
       </Box>
 
       <Box sx={{ pt: 10, px: 4, maxWidth: 1800, margin: '0', position: 'relative', zIndex: 2, color: '#000', marginBottom: '0px' }}>

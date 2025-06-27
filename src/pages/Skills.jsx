@@ -225,9 +225,9 @@ useEffect(() => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    gap: 26,
+    gap: 20,
     flexWrap: 'wrap',
-    mt: 20,
+    mt: 10,
     px: 2,
     fontFamily: '"Ubuntu Mono", monospace',
   }}
@@ -240,7 +240,7 @@ useEffect(() => {
       backgroundColor: 'rgba(252, 246, 244, 0.25)',
       padding: '2rem',
       width: '30vw',
-      height: '60vh',
+      height: '72vh',
       zIndex: 3,
       lineHeight: 1.5,
       display: 'flex',
@@ -264,7 +264,7 @@ useEffect(() => {
 
     <Typography sx={{ fontSize: 'calc(0.5em + 0.8vw)', fontFamily: '"Ubuntu Mono", monospace' , paddingTop: "25px" }}>
       <strong >I LIKE TO CODE IN</strong><br />
-     <span  style={{ display: 'inline-block', paddingLeft: '1.5rem' }}>
+     <span  style={{ display: 'inline-block', paddingLeft: '1.5rem', paddingTop: '15px' }}>
         React.js, JavaScript, HTML5, CSS, Tailwind CSS, Redux Toolkit, Bootstrap, Jest(Testing)
   </span>
     </Typography>
@@ -291,7 +291,7 @@ useEffect(() => {
       backgroundColor: 'rgba(252, 246, 244, 0.25)',
       padding: '2rem',
       width: '30vw',
-      height: '60vh',
+      height: '72vh',
       zIndex: 3,
       lineHeight: 1.5,
       display: 'flex',
@@ -315,7 +315,7 @@ useEffect(() => {
 
     <Typography sx={{ fontSize: 'calc(0.5em + 1vw)', fontFamily: '"Ubuntu Mono", monospace',   paddingTop: "25px"  }}>
       <strong>Skills</strong><br />
-      <span  style={{ display: 'inline-block', paddingLeft: '1.5rem' }}>
+      <span  style={{ display: 'inline-block', paddingLeft: '1.5rem',paddingTop: "15px" }}>
       NodeJS, ExpressJS, MongoDB, Mongoose</span>
     </Typography>
 
