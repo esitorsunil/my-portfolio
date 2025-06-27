@@ -155,7 +155,7 @@ const Project = () => {
         {/* Horizontal scroll */}
         <ul className="items jKLUHq" id="grab-scroll">
           {projects.map((proj, index) => (
-            <div className="flip-card" key={index}>
+            <div className="flip-card pe-5" key={index}>
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <li className="boOfnS">

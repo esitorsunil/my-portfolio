@@ -43,13 +43,18 @@ const SocialLinks = ({ visible = true }) => {
     },
     {
       
-  href: 'https://leetcode.com/u/sunil_esitor/', // update with your profile URL
+  href: 'mailto:sunil.esitor@gmail.com', // update with your profile URL
   icon: (
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-      alt="LeetCode"
-      style={{ width: 24, height: 24, color: "black" }}
-    />
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  height="24"
+  width="24"
+  fill="black"
+  viewBox="0 0 24 24"
+>
+  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+</svg>
+
   ),
   hoverColor: '#FFA116',
 },

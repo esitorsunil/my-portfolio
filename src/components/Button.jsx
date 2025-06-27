@@ -27,7 +27,7 @@ const Button = () => {
              14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"
         />
       </svg>
-        <span>Click Here</span>
+        
     </button>
   );
 };
