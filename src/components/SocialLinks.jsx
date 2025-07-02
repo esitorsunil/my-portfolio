@@ -42,7 +42,7 @@ const SocialLinks = ({ visible = true }) => {
     },
     {
       
-  href: 'mailto:sunil.esitor@gmail.com', // update with your profile URL
+  href: 'mailto:sunil.esitor@gmail.com', 
   icon: (
     <svg
   xmlns="http://www.w3.org/2000/svg"

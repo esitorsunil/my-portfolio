@@ -115,8 +115,7 @@ const Features = () => {
   return (
     <PageWrapper direction="right">
     <Box sx={{ height: '100vh', width: '100vw', position: 'relative', overflowY: 'auto', color: '#fff' }}>
-      
-      {/* Background */}
+ 
       <Box sx={{
         position: 'fixed',
         top: 0, left: 0, height: '100%', width: '100%',
@@ -133,13 +132,12 @@ const Features = () => {
         zIndex: 1
       }} />
 
-      {/* Top bar */}
       <Box sx={{
         position: 'fixed',
         top: 0, left: 20, right: 0,
         height: 64, px: 3,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-       zIndex: 10 // <- higher than background and content
+       zIndex: 10 
       }}>
         <Typography variant="body1" component="span" sx={{
           fontWeight: 'bold', fontSize: '1.9rem',
@@ -202,8 +200,6 @@ const Features = () => {
     FEATURES
   </Box>
         <SocialLinks visible={true} />
-
-        {/* Card Grid */}
         <Grid container spacing={8} sx={{ mt: 14 }} justifyContent="center">
   {codingCards.map((card, i) => (
     <Grid
@@ -230,7 +226,7 @@ const Features = () => {
     underline="none"
     sx={{
       width: {
-        xs: '100%',   // Full width (but with margin) on mobile
+        xs: '100%',  
         sm: 320,
         md: 400
       },
@@ -272,7 +268,7 @@ const Features = () => {
         textOverflow: 'ellipsis',
       
         fontSize: {
-          xs: '0.8rem',   // smaller title on mobile
+          xs: '0.8rem', 
           sm: '1.1rem',
           md: '1.2rem',
         },
@@ -289,8 +285,6 @@ const Features = () => {
         gap: 1,
         flexWrap: 'wrap',
         mb: 2,
-      
-       // ✅ center tags on mobile
       }}
     >
       {card.tags.map((tag, j) => (
@@ -309,7 +303,7 @@ const Features = () => {
         WebkitBoxOrient: 'vertical',
     
         fontSize: {
-          xs: '0.8rem', // ✅ smaller description on mobile
+          xs: '0.8rem',
           sm: '0.9rem',
           md: '1rem',
         },
@@ -323,8 +317,6 @@ const Features = () => {
   
   ))}
 </Grid>
-
-
       </Box>
     </Box>
     </PageWrapper>

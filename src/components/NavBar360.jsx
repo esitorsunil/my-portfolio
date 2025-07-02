@@ -113,14 +113,14 @@ const CircularNavbar = () => {
     underline="none"
     color="inherit"
     sx={{
-      display: 'inline-flex',      // flex for transform to work nicely
+      display: 'inline-flex',      
       alignItems: 'center',
       gap: 0.5,
       fontWeight: 'bold',
-      transition: 'transform 0.3s ease',  // smooth zoom
+      transition: 'transform 0.3s ease',
       '&:hover': {
         textDecoration: 'none',
-        transform: 'scale(1.2)',  // zoom on hover
+        transform: 'scale(1.2)', 
       },
     }}
   >
@@ -214,7 +214,7 @@ const CircularNavbar = () => {
       fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
       color: 'black',
       
-      display: 'inline-block', // needed to apply transform on inline element
+      display: 'inline-block', 
       transition: 'transform 0.3s ease, color 0.3s ease',
       '&:hover': {
         textDecoration: 'none',

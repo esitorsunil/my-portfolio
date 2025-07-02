@@ -12,10 +12,10 @@ const Skills = () => {
     const ctx = canvas.getContext('2d');
 
     let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = document.body.scrollHeight); // Full page height
+    let height = (canvas.height = document.body.scrollHeight); 
 
     const isMobile = window.innerWidth < 600;
-    const numPoints = isMobile ? 50 : 120; // Fewer particles on mobile
+    const numPoints = isMobile ? 50 : 120; 
     const distanceThreshold = 160;
     const points = [];
     const mouse = { x: null, y: null };
@@ -121,7 +121,6 @@ const Skills = () => {
         backgroundColor: "rgb(252, 246, 244)",
       }}
     >
-      {/* Canvas covering entire scroll area */}
       <canvas
         ref={canvasRef}
         style={{
@@ -135,7 +134,6 @@ const Skills = () => {
         }}
       />
 
-      {/* Top Bar */}
       <Box
         sx={{
           position: 'fixed',
@@ -216,7 +214,7 @@ const Skills = () => {
     mt: 10,
     px: 2,
     maxHeight: {
-      xs: 'calc(100vh - 100px)', // vertical scroll area height on mobile
+      xs: 'calc(100vh - 100px)', 
       md: 'none',
     },
     overflowY: {
@@ -235,7 +233,6 @@ const Skills = () => {
       fontFamily: '"Ubuntu Mono", monospace',
     }}
   >
-  {/* Box 1 */}
   <Box
     sx={{
       border: '2px solid rgb(0, 0, 0)',
@@ -243,14 +240,14 @@ const Skills = () => {
       backgroundColor: 'rgba(252, 246, 244, 0.25)',
       padding: '2rem',
       width: {
-      xs: '58vw',   // ✅ On extra small screens (mobile)
-      sm: '80vw',   // ✅ On small tablets
-      md: '30vw',   // ✅ Default for medium+ screens (your original)
+      xs: '58vw',   
+      sm: '80vw',   
+      md: '30vw',   
     },
     height: {
-      xs: 'auto',   // ✅ Let height adjust on mobile
+      xs: 'auto',  
       sm: 'auto',
-      md: '58vh',   // ✅ Default for desktop
+      md: '58vh',  
     },
       zIndex: 3,
       lineHeight: 1.5,
@@ -314,7 +311,6 @@ const Skills = () => {
 
   </Box>
 
-  {/* Box 2 */}
   <Box
     sx={{
       border: '2px solid rgb(0, 0, 0)',
@@ -322,14 +318,14 @@ const Skills = () => {
       backgroundColor: 'rgba(252, 246, 244, 0.25)',
       padding: '2rem',
       width: {
-      xs: '55vw',   // ✅ On extra small screens (mobile)
-      sm: '80vw',   // ✅ On small tablets
-      md: '30vw',   // ✅ Default for medium+ screens (your original)
+      xs: '55vw',   
+      sm: '80vw',   
+      md: '30vw',   
     },
     height: {
-      xs: 'auto',   // ✅ Let height adjust on mobile
+      xs: 'auto',   
       sm: 'auto',
-      md: '58vh',   // ✅ Default for desktop
+      md: '58vh',   
     },
       zIndex: 3,
       lineHeight: 1.5,

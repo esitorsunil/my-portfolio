@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../components/Button';
 import './Home.css';
 import CircularNavbar from '../components/NavBar360';

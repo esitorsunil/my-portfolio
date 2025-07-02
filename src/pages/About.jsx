@@ -83,7 +83,6 @@ const About = () => {
       >
         <StarfieldBackground />
 
-        {/* Custom Animations */}
         <style>
           {`
             @keyframes float {
@@ -105,7 +104,6 @@ const About = () => {
           `}
         </style>
 
-        {/* Top Bar */}
         <Box
           sx={{
             position: 'fixed',
@@ -167,8 +165,6 @@ const About = () => {
   
 </svg>
         </Box>
-
-        {/* Main Content */}
         <Box
           sx={{
             pt: 10,
@@ -181,7 +177,6 @@ const About = () => {
             marginBottom: '100px',
           }}
         >
-          {/* Ghost Heading */}
           <Box
             component="h1"
             sx={{
@@ -200,7 +195,6 @@ const About = () => {
 
           <SocialLinks visible={true} />
 
-          {/* Floating Bio Box (Animated) */}
           <Box
             sx={{
               border: '2px solid rgb(252, 246, 244)',
@@ -239,7 +233,6 @@ const About = () => {
             efficient solutions with collaborative teams.
           </Box>
 
-          {/* Spaceman Image (Animated) */}
           <Box
             component="img"
             src="https://hareesh.web.app/static/media/spaceman.dafa57a8.png"
