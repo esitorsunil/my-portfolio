@@ -3,6 +3,7 @@ import { Box, Typography, IconButton, Chip, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PageWrapper from '../components/PageWrapper';
 
 const projects = [
   {
@@ -124,6 +125,7 @@ const Project = () => {
   }, []);
 
   return (
+    <PageWrapper direction="left">
     <Box sx={{ height: '100vh', width: '100vw', position: 'relative', overflowY: 'auto', color: '#fff' }}>
       <Box sx={{ position: 'fixed', top: 0, left: 0, height: '100%', width: '100%', backgroundColor: 'black', zIndex: 1 }} />
 
@@ -214,6 +216,7 @@ const Project = () => {
         </ul>
       </Box>
     </Box>
+    </PageWrapper>
   );
 };
 

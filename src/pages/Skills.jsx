@@ -2,6 +2,7 @@ import { Box, Typography, IconButton } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
 import { useEffect, useRef } from 'react';
+import PageWrapper from '../components/PageWrapper';
 
 const Skills = () => {
   const canvasRef = useRef(null);
@@ -108,6 +109,7 @@ const Skills = () => {
   }, []);
 
   return (
+    <PageWrapper>
     <Box
       sx={{
         minHeight: '100vh',
@@ -371,6 +373,7 @@ const Skills = () => {
 </Box>
 
     </Box>
+    </PageWrapper>
   );
 };
 

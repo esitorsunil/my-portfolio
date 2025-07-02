@@ -14,6 +14,7 @@ const CircularNavbar = () => {
   }, []);
 
   return (
+    
     <div>
       <Box
         className="top-left-logo"

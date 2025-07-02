@@ -3,6 +3,7 @@ import { Box, Typography, IconButton, Grid, Chip, Link, Divider } from '@mui/mat
 import { Link as RouterLink } from 'react-router-dom';
 import SocialLinks from '../components/SocialLinks';
 import { useEffect, useState } from 'react';
+import PageWrapper from '../components/PageWrapper';
 
 const codingCards = [
    {
@@ -112,6 +113,7 @@ const Features = () => {
     return () => clearInterval(interval);
   }, []);
   return (
+    <PageWrapper direction="right">
     <Box sx={{ height: '100vh', width: '100vw', position: 'relative', overflowY: 'auto', color: '#fff' }}>
       
       {/* Background */}
@@ -325,6 +327,7 @@ const Features = () => {
 
       </Box>
     </Box>
+    </PageWrapper>
   );
 };
 
