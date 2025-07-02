@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Document Template',
     description: 'Built a KEKA-style document editor in 3 days during my internship, enabling swift generation of official letters and streamlining HR workflows.',
-    image: '../../public/assests/images/project5.png',
+    image: '/assests/images/project5.png',
     tags: ['#React', '#Redux', '#WebEditor', '#Bootstrap'],
     liveLink: 'https://hrms-document-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/keka',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Netflix GPT',
     description: 'AI-powered Netflix interface with real-time movie recommendations and TMDB + OpenAI APIs and multi-lang.',
-    image: '../../public/assests/images/project1.png',
+    image: '/assests/images/project1.png',
     tags: ['#React', '#OpenAI', '#JavaScript', '#Firebase',  '#Redux'],
     liveLink: 'https://sunny-tanuki-d21a48.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/netflix-gpt',
@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Multi-lang NPM',
     description: 'Developed and published a React npm package for real-time webpage translation with 100+ language support and original text restoration.',
-    image: '../../public/assests/images/project9.png',
+    image: '/assests/images/project9.png',
     tags: ['#React', '#NPMPublish'],
     liveLink: 'https://multilang-sunil.netlify.app/',
     githubLink: 'https://www.npmjs.com/package/custom-react-auto-translate-dropdown',
@@ -34,7 +34,7 @@ const projects = [
   {
     title: 'Google Clone',
     description: 'Clone of Google With dark mode functionality, built with Google Custom Search API and ReactJS.',
-    image: '../../public/assests/images/project10.png',
+    image: '/assests/images/project10.png',
     tags: ['#React', '#GoogleSearchAPI', '#CSS', "#HTML"],
     liveLink: 'https://github.com/esitorsunil/google-clone',
     githubLink: 'https://esitorsunil.github.io/google-clone/',
@@ -43,7 +43,7 @@ const projects = [
   {
     title: 'E-Commerce',
     description: 'Built an e-commerce site with search, filters, wishlist, and a unique surprise gift-packed shipping option, plus a multi-step scrollable order confirmation flow for smooth checkout. ',
-    image: '../../public/assests/images/project2.png',
+    image: '/assests/images/project2.png',
     tags: ['#API', '#ContextAPI', '#React', '#Bootstrap'],
     liveLink: 'https://powerlook-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/ecommercee',
@@ -51,7 +51,7 @@ const projects = [
   {
     title: 'Recipe Finder',
     description: 'Search and view recipes by ingredients using TheMealDB API.',
-    image: '../../public/assests/images/project3.png',
+    image: '/assests/images/project3.png',
     tags: ['#React', '#TheMealDB', '#Responsive', '#Search'],
     liveLink: 'https://findfood-sunil.netlify.app/',
     githubLink: 'https://app.netlify.com/projects/findfood-receipe/overview',
@@ -59,7 +59,7 @@ const projects = [
   {
     title: 'Zoom Task',
     description: 'Recreated a company-required Zoom task module UI with full dynamic functionality using React within 2 days during my internship.',
-    image: '../../public/assests/images/project6.png',
+    image: '/assests/images/project6.png',
     tags: ['#React', '#Zustand', '#Redux', '#Boostrap'],
     liveLink: 'https://zoom-task-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/task-manager',
@@ -67,7 +67,7 @@ const projects = [
   {
     title: 'DevTinder',
     description: 'Built a scalable Express.js using MVC architecture with JWT-based auth and tested RESTful APIs for user, post, and notification features.',
-    image: '../../public/assests/images/project7.png',
+    image: '/assests/images/project7.png',
     tags: ['#React', '#Node', '#ExpressJS', '#MongoDB', '#Mongoose'],
     liveLink: 'https://github.com/esitorsunil/frontend-dev',
     githubLink: 'https://github.com/esitorsunil/dev-tinder',
@@ -75,7 +75,7 @@ const projects = [
   {
     title: 'Course Platform',
     description: 'Crafted a fully responsive course landing interface with adaptive theme toggle within 3 hours.',
-    image: '../../public/assests/images/project8.png',
+    image: '/assests/images/project8.png',
     tags: ['#HTML', '#CSS'],
     liveLink: 'https://esitorsunil.github.io/landing-page/',
     githubLink: 'https://github.com/esitorsunil/dev-tinder',
@@ -148,6 +148,9 @@ const Project = () => {
       <Box sx={{ pt: 10, px: 4, maxWidth: 1800, margin: '0', position: 'relative', zIndex: 2, color: '#000', marginBottom: '0px' }}>
         <Box component="h1" sx={{ position: 'fixed', top: '0.1rem', left: '6rem', color: 'rgba(252, 246, 244, 0.2)', fontSize: 'calc(3rem + 3vw)', zIndex: 0, fontWeight: 'bold', fontFamily: "'Dancing Script', cursive" }}>
           WORK
+        </Box>
+        <Box component="h1" sx={{ position: 'fixed', bottom: '0.1rem', left: '6rem', color: 'rgba(252, 246, 244, 0.2)', fontSize: 'calc(3rem + 3vw)', zIndex: 0, fontWeight: 'bold', fontFamily: "'Dancing Script', cursive" }}>
+          SWIPE...
         </Box>
 
         <SocialLinks visible={true} />

@@ -11,12 +11,12 @@ const codingCards = [
     tags: ['#js', '#tcs', '#core'],
     note: 'May 30, 2024',
     bgColor: '#e0e0e0',
-    img: '../../public/assests/images/txs.png',
+    img: '/assests/images/txs.png',
   },
   {
     title: 'PSS - ReactJS Intern',
     href: 'https://www.pranathiss.com/',
-    tags: ['#ReactJS', '#Bootstrap', '#MaterialUI', '#Openai', '#Redux Toolkit'],
+    tags: ['#ReactJS', '#Bootstrap', '#Openai', '#Redux Toolkit'],
     note: 'Worked on Real world projects and Collaborated using BigBasket by using conventional commits',
     bgColor: '#e0e0e0',
     img: 'https://www.pranathiss.com/static/assets/images/pranathiss-logo.webp',
@@ -27,13 +27,13 @@ const codingCards = [
     tags: ['#research', '#openai', '#postfix'],
     note: 'prepared a research paper and delivered a presentation at the International Conference on CAIT 2025.',
     bgColor: '#e0e0e0',
-    img: '../../public/assests/images/banner2.jpg',
+    img: '/assests/images/banner2.jpg',
   },
    {
     title: 'Core JavaScript',
     href: 'https://github.com/esitorsunil/namastejavascript',
     tags: ['#debounce', '#promise', '#async'],
-    note: 'Core Concepts in JS including the tricky ones like Closures, Prototypal Inheritance, Promise, Event Loop, etc.',
+    note: 'Core Concepts in JS including the tricky ones like Closures, Event loop, Promise, etc.,',
     bgColor: '#e0e0e0',
     img: 'https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png',
   },
@@ -107,7 +107,7 @@ const Features = () => {
       } else {
         setVisibleCount(i);
       }
-    }, 300); 
+    }, 800); 
 
     return () => clearInterval(interval);
   }, []);
@@ -202,96 +202,122 @@ const Features = () => {
         <SocialLinks visible={true} />
 
         {/* Card Grid */}
-        <Grid container spacing={8} sx={{ mt: 14, ml: '130px' }}>
+        <Grid container spacing={8} sx={{ mt: 14 }} justifyContent="center">
   {codingCards.map((card, i) => (
     <Grid
-    item
-    xs={12}
-    sm={6}
-    md={6}
-    lg={6}
-    xl={6}
-    key={i}
-    sx={{
-      opacity: i < visibleCount ? 1 : 0,
-      transform: i < visibleCount
-        ? 'translateY(0) scale(1)'
-        : 'translateY(20px) scale(0.8)',
-      transition: 'opacity 0.3s ease, transform 0.3s ease',
-    }}
-  >
-    <Link
-  href={card.href}
-  target="_blank"
-  underline="none"
+  item
+  xs={12}
+  sm={6}
+  md={6}
+  lg={6}
+  xl={6}
+  key={i}
   sx={{
-    width: 400,
-    height: 350,
+    opacity: i < visibleCount ? 1 : 0,
+    transform: i < visibleCount
+      ? 'translateY(0) scale(1)'
+      : 'translateY(20px) scale(0.8)',
+    transition: 'opacity 0.3s ease, transform 0.3s ease',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    p: 2,
-    borderRadius: 1,
-    transition: 'transform 0.3s ease',
-    '&:hover': { transform: 'scale(1.02)' },
-    overflow: 'hidden',
-    border: '1px solid black', // ✅ Added border
+    justifyContent: 'center',
   }}
 >
-      <Box
-        component="img"
-        src={card.img}
-        alt={card.title}
-        sx={{
-          width: '100%',
-          height: 200,
-          objectFit: 'contain',
-          backgroundColor: '#f8f8f8',
-          borderRadius: 1,
-          mb: 1.5,
-        }}
-      />
-  
-      <Typography
-        variant="h6"
-        gutterBottom
-        sx={{
-         
-          color: '#000',
-          display: 'inline-block',
-          px: 1,
-          borderRadius: 1,
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-        }}
-      >
-        {card.title}
-      </Typography>
-  
-      <Divider sx={{ my: 1, borderColor: '#000' }} />
-  
-      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 1 }}>
-        {card.tags.map((tag, j) => (
-          <Chip key={j} label={tag} variant="outlined" size="small" />
-        ))}
-      </Box>
-  
-      <Typography
-        variant="body2"
-        color="#000"
-        sx={{
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          display: '-webkit-box',
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: 'vertical',
-        }}
-      >
-        {card.note}
-      </Typography>
-    </Link>
-  </Grid>
+  <Link
+    href={card.href}
+    target="_blank"
+    underline="none"
+    sx={{
+      width: {
+        xs: '100%',   // Full width (but with margin) on mobile
+        sm: 320,
+        md: 400
+      },
+      height: 350,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 2,
+      borderRadius: 1,
+      transition: 'transform 0.3s ease',
+      '&:hover': { transform: 'scale(1.02)' },
+      overflow: 'hidden',
+      border: '1px solid black',
+    }}
+  >
+    <Box
+      component="img"
+      src={card.img}
+      alt={card.title}
+      sx={{
+        width: '100%',
+        height: 200,
+        objectFit: 'contain',
+        backgroundColor: '#f8f8f8',
+        borderRadius: 1,
+        mb: 1.5,
+      }}
+    />
+
+    <Typography
+      variant="h6"
+      gutterBottom
+      sx={{
+        color: '#000',
+        px: 1,
+        borderRadius: 1,
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+      
+        fontSize: {
+          xs: '0.8rem',   // smaller title on mobile
+          sm: '1.1rem',
+          md: '1.2rem',
+        },
+      }}
+    >
+      {card.title}
+    </Typography>
+
+    <Divider sx={{ my: 1, borderColor: '#000' }} />
+
+    <Box
+      sx={{
+        display: 'flex',
+        gap: 1,
+        flexWrap: 'wrap',
+        mb: 2,
+      
+       // ✅ center tags on mobile
+      }}
+    >
+      {card.tags.map((tag, j) => (
+        <Chip key={j} label={tag} variant="outlined" size="small" />
+      ))}
+    </Box>
+
+    <Typography
+      variant="body2"
+      color="#000"
+      sx={{
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        WebkitLineClamp: 3,
+        WebkitBoxOrient: 'vertical',
+    
+        fontSize: {
+          xs: '0.8rem', // ✅ smaller description on mobile
+          sm: '0.9rem',
+          md: '1rem',
+        },
+      }}
+    >
+      {card.note}
+    </Typography>
+  </Link>
+</Grid>
+
   
   ))}
 </Grid>

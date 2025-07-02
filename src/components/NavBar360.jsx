@@ -92,10 +92,10 @@ const CircularNavbar = () => {
   sx={{
     position: 'absolute',
     top: 20,
-    right: 20,
+    right: 30,
     display: 'flex',
     alignItems: 'center',
-    fontSize: '1.2rem',
+    fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem' },
     color: '#333',
     mt: 2,
     transform: visible ? 'translateY(0)' : 'translateY(-30px)',
@@ -123,7 +123,7 @@ const CircularNavbar = () => {
       },
     }}
   >
-    Say hi...
+    Say hi..
   </Link>
 </Box>
 
@@ -157,7 +157,7 @@ const CircularNavbar = () => {
     sx={{
       color: 'black',
       textDecoration: 'none',
-      fontSize: '1.5rem',
+      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
       transition: 'transform 0.3s ease, color 0.3s ease', // smooth transition
       '&:hover': {
         textDecoration: 'none',
@@ -176,7 +176,7 @@ const CircularNavbar = () => {
     sx={{
       color: 'black',
       textDecoration: 'none',
-      fontSize: '1.5rem',
+      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
       transition: 'transform 0.3s ease, color 0.3s ease', // smooth transition
       '&:hover': {
         textDecoration: 'none',
@@ -192,7 +192,7 @@ const CircularNavbar = () => {
   sx={{
     position: 'absolute',
     top: '30%',
-    left: 'calc(1rem + 2vw)',
+    left: 'calc(1.7rem + 2vw)',
     transform: visible
       ? 'rotate(-90deg) translateY(-50%)'
       : 'rotate(-90deg) translateY(-80%)',
@@ -208,9 +208,11 @@ const CircularNavbar = () => {
     rel="noopener noreferrer"
     underline="none"
     color="inherit"
+    
     sx={{
-      fontSize: '1.5rem',
+      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
       color: 'black',
+      
       display: 'inline-block', // needed to apply transform on inline element
       transition: 'transform 0.3s ease, color 0.3s ease',
       '&:hover': {
@@ -226,7 +228,7 @@ const CircularNavbar = () => {
   sx={{
     position: 'absolute',
     top: '50%',
-    left: 'calc(1rem + 2vw)',
+    left: 'calc(1.7rem + 2vw)',
     transform: visible
       ? 'rotate(-90deg) translateY(-50%)'
       : 'rotate(-90deg) translateY(-80%)',
@@ -253,7 +255,7 @@ const CircularNavbar = () => {
       sx={{
         color: 'black',
         textDecoration: 'none',
-        fontSize: '1.5rem',
+        fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' }
       }}
     >
       Projects
@@ -265,7 +267,7 @@ const CircularNavbar = () => {
   sx={{
     position: 'absolute',
     top: '50%',
-    right: 'calc(1rem + 2vw)',
+    right: 'calc(1.7rem + 2vw)',
     transform: visible
       ? 'rotate(90deg) translateY(-50%)'
       : 'rotate(90deg) translateY(-80%)',
@@ -292,7 +294,7 @@ const CircularNavbar = () => {
       sx={{
         color: 'black',
         textDecoration: 'none',
-        fontSize: '1.5rem',
+        fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' }
       }}
     >
       Feat
