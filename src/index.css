@@ -98,3 +98,20 @@ body, html {
   color: white;
   border: 1px solid white;
 }
+
+@media (max-width: 600px) {
+  #grab-scroll {
+    scroll-padding-left: 16px; /* ensures first card is fully visible */
+    padding-left: 16px; /* visually aligns it */
+  }
+
+  .flip-card {
+    min-width: 80vw; /* ensures it nearly fills screen for readability */
+    scroll-snap-align: start;
+  }
+
+  .items {
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+}
