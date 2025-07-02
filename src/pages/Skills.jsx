@@ -213,16 +213,28 @@ const Skills = () => {
 
    <Box
   sx={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    gap: 20,
-    flexWrap: 'wrap',
     mt: 10,
     px: 2,
-    fontFamily: '"Ubuntu Mono", monospace',
+    maxHeight: {
+      xs: 'calc(100vh - 100px)', // vertical scroll area height on mobile
+      md: 'none',
+    },
+    overflowY: {
+      xs: 'auto',
+      md: 'visible',
+    },
   }}
 >
+  <Box
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      gap: 20,
+      flexWrap: 'wrap',
+      fontFamily: '"Ubuntu Mono", monospace',
+    }}
+  >
   {/* Box 1 */}
   <Box
     sx={{
@@ -370,6 +382,7 @@ const Skills = () => {
   </Typography>
 </Box>
   </Box>
+</Box>
 </Box>
 
     </Box>
