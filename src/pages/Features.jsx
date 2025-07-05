@@ -115,7 +115,7 @@ const Features = () => {
   return (
     <PageWrapper direction="right">
     <Box sx={{ height: '100vh', width: '100vw', position: 'relative', overflowY: 'auto', color: '#fff' }}>
- 
+
       <Box sx={{
         position: 'fixed',
         top: 0, left: 0, height: '100%', width: '100%',
@@ -137,7 +137,7 @@ const Features = () => {
         top: 0, left: 20, right: 0,
         height: 64, px: 3,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-       zIndex: 10 
+        zIndex: 10
       }}>
         <Typography variant="body1" component="span" sx={{
           fontWeight: 'bold', fontSize: '1.9rem',
@@ -163,8 +163,7 @@ const Features = () => {
             }}
           />
         </IconButton>
-
-     <svg
+        <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 576 512"
   width="70"
@@ -172,154 +171,160 @@ const Features = () => {
   fill="currentColor"
   style={{ color: 'black' }}
 >
-  
 </svg>
-      
       </Box>
 
       <Box sx={{
         pt: 10, px: 4, maxWidth: 1200, margin: 'auto',
         position: 'relative', zIndex: 2, color: '#000', marginBottom: '100px',
       }}>
+        <Box
+          component="h1"
+          sx={{
+            position: 'fixed',
+            top: '0.1rem',
+            left: '6rem',
+            color: 'rgba(0, 0, 0, 0.2)',
+            fontSize: 'calc(3rem + 3vw)',
+            zIndex: 0,
+            fontWeight: 'bold',
+            fontFamily: "'Dancing Script', cursive",
+          }}
+        >
+          FEATURES
+        </Box>
 
-  <Box
-    component="h1"
-    sx={{
-      position: 'fixed',
-      top: '0.1rem',
-      left: '6rem',
-      color: 'rgba(0, 0, 0, 0.2)',
-      fontSize: 'calc(3rem + 3vw)',
-      zIndex: 0,
-     
-      fontWeight: 'bold',
-      fontFamily: "'Dancing Script', cursive",
-     
-    }}
-  >
-    FEATURES
-  </Box>
         <SocialLinks visible={true} />
+
         <Grid container spacing={8} sx={{ mt: 14 }} justifyContent="center">
-  {codingCards.map((card, i) => (
-    <Grid
-  item
-  xs={12}
-  sm={6}
-  md={6}
-  lg={6}
-  xl={6}
-  key={i}
-  sx={{
-    opacity: i < visibleCount ? 1 : 0,
-    transform: i < visibleCount
-      ? 'translateY(0) scale(1)'
-      : 'translateY(20px) scale(0.8)',
-    transition: 'opacity 0.3s ease, transform 0.3s ease',
-    display: 'flex',
-    justifyContent: 'center',
-  }}
->
-  <Link
-    href={card.href}
-    target="_blank"
-    underline="none"
-    sx={{
-      width: {
-        xs: '100%',  
-        sm: 320,
-        md: 400
-      },
-      height: 350,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
-      p: 2,
-      borderRadius: 1,
-      transition: 'transform 0.3s ease',
-      '&:hover': { transform: 'scale(1.02)' },
-      overflow: 'hidden',
-      border: '1px solid black',
-    }}
-  >
-    <Box
-      component="img"
-      src={card.img}
-      alt={card.title}
-      sx={{
-        width: '100%',
-        height: 200,
-        objectFit: 'contain',
-        backgroundColor: '#f8f8f8',
-        borderRadius: 1,
-        mb: 1.5,
-      }}
-    />
+          {codingCards.map((card, i) => (
+            <Grid
+              item
+              xs={12} sm={6} md={6} lg={6} xl={6}
+              key={i}
+              sx={{
+                opacity: i < visibleCount ? 1 : 0,
+                transform: i < visibleCount
+                  ? 'translateY(0) scale(1)'
+                  : 'translateY(20px) scale(0.8)',
+                transition: 'opacity 0.3s ease, transform 0.3s ease',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Link
+                href={card.href}
+                target="_blank"
+                underline="none"
+                sx={{
+                  width: { xs: '100%', sm: 320, md: 400 },
+                  height: 350,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-start',
+                  p: 2,
+                  borderRadius: 1,
+                  overflow: 'hidden',
+                  border: '1px solid black',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+  backgroundColor: 'rgba(0,0,0,0.85)',
+  color: '#fff',
+  transform: 'scale(1.02)',
+  '& .card-title, & .card-note, & .card-chip': {
+    color: '#fff',
+    borderColor: '#fff',
+  },
+  '& .card-divider': {
+    borderColor: '#fff',
+  },
+}
+                }}
+              >
+                <Box
+                  component="img"
+                  src={card.img}
+                  alt={card.title}
+                  sx={{
+                    width: '100%',
+                    height: 200,
+                    objectFit: 'contain',
+                    backgroundColor: '#f8f8f8',
+                    borderRadius: 1,
+                    mb: 1.5,
+                  }}
+                />
 
-    <Typography
-      variant="h6"
-      gutterBottom
-      sx={{
-        color: '#000',
-        px: 1,
-        borderRadius: 1,
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-      
-        fontSize: {
-          xs: '0.8rem', 
-          sm: '1.1rem',
-          md: '1.2rem',
-        },
-      }}
-    >
-      {card.title}
-    </Typography>
+                <Typography
+                  variant="h6"
+             
+                  className="card-title"
+                  sx={{
+                    color: '#000',
+                    px: 1,
+                    borderRadius: 1,
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    fontSize: { xs: '0.8rem', sm: '1.1rem', md: '1.2rem' },
+                    transition: 'color 0.3s ease',
+                  }}
+                >
+                  {card.title}
+                </Typography>
 
-    <Divider sx={{ my: 1, borderColor: '#000' }} />
+                <Divider className="card-divider" sx={{ my: 1.5, borderColor: '#000', transition: 'border-color 0.3s ease' }} />
 
-    <Box
-      sx={{
-        display: 'flex',
-        gap: 1,
-        flexWrap: 'wrap',
-        mb: 2,
-      }}
-    >
-      {card.tags.map((tag, j) => (
-        <Chip key={j} label={tag} variant="outlined" size="small" />
-      ))}
-    </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    gap: 1,
+                    flexWrap: 'wrap',
+                    mb: 2,
+                  }}
+                >
+                  {card.tags.map((tag, j) => (
+                    <Chip
+                      key={j}
+                      label={tag}
+                      variant="outlined"
+                      size="small"
+                      className="card-chip"
+                      sx={{
+                        transition: 'all 0.3s ease',
+                        borderColor: '#000',
+                        color: '#000',
+                        '& .MuiChip-label': {
+                          transition: 'color 0.3s ease',
+                        },
+                      }}
+                    />
+                  ))}
+                </Box>
 
-    <Typography
-      variant="body2"
-      color="#000"
-      sx={{
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        display: '-webkit-box',
-        WebkitLineClamp: 3,
-        WebkitBoxOrient: 'vertical',
-    
-        fontSize: {
-          xs: '0.8rem',
-          sm: '0.9rem',
-          md: '1rem',
-        },
-      }}
-    >
-      {card.note}
-    </Typography>
-  </Link>
-</Grid>
-
-  
-  ))}
-</Grid>
+                <Typography
+                  variant="body2"
+                  className="card-note"
+                  sx={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    fontSize: { xs: '0.8rem', sm: '0.9rem', md: '1rem' },
+                    color: '#000',
+                    transition: 'color 0.3s ease',
+                  }}
+                >
+                  {card.note}
+                </Typography>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Box>
-    </PageWrapper>
+  </PageWrapper>
   );
 };
 

@@ -247,7 +247,7 @@ const Skills = () => {
     height: {
       xs: 'auto',  
       sm: 'auto',
-      md: '58vh',  
+      md: '65vh',  
     },
       zIndex: 3,
       lineHeight: 1.5,
@@ -325,7 +325,7 @@ const Skills = () => {
     height: {
       xs: 'auto',   
       sm: 'auto',
-      md: '58vh',   
+      md: '65vh',   
     },
       zIndex: 3,
       lineHeight: 1.5,
