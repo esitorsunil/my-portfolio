@@ -71,17 +71,42 @@ const StarfieldBackground = () => {
 const About = () => {
   return (
     <PageWrapper>
-      <Box
-        sx={{
-          height: '100vh',
-          width: '100vw',
-          position: 'relative',
-          overflowY: 'auto',
-          color: '#fff',
-          fontFamily: 'Ubuntu Mono, monospace',
-        }}
-      >
+       <Box sx={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    
+    {/* Fixed Fullscreen Background Layer */}
+    <Box sx={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      width: '100vw', 
+      height: '100vh', 
+      backgroundColor: 'black', 
+      zIndex: -2 
+    }} />
+    
+    <Box sx={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      width: '100vw', 
+      height: '100vh', 
+      zIndex: -1 
+    }}>
         <StarfieldBackground />
+        </Box>
+
+        
+    {/* Scrollable Content Layer */}
+    <Box
+      sx={{
+        position: 'relative',
+        overflowY: 'auto',
+        height: '100vh',
+        width: '100vw',
+        color: '#fff',
+        fontFamily: 'Ubuntu Mono, monospace',
+      }}
+    >
 
         <style>
           {`
@@ -116,7 +141,6 @@ const About = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             zIndex: 10,
-            bgcolor: '#000',
           }}
         >
           <Typography
@@ -207,7 +231,10 @@ const About = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              fontSize: 'calc(0.5rem + 1vw)',
+              fontSize: {
+                xs: '0.8rem',              // Mobile (xs) - smaller font
+                sm: 'calc(0.5rem + 1vw)',   // Tablet and above (sm and up)
+              },
               backdropFilter: 'blur(4px)',
               position: 'absolute',
               left: 'calc(1rem + 5vw)',
@@ -217,9 +244,10 @@ const About = () => {
               opacity: 0,
               animation: 'slideInFromBottomRight 1s ease-out forwards',
               animationDelay: '0.8s',
+              marginBottom: '10px',
             }}
           >
-            I'm a Front-End Developer at Pranathi Software Services, passionate about crafting
+            I'm a Front-End Developer Intern at Pranathi Software Services, passionate about crafting
             clean, responsive, and interactive web interfaces. I specialize in React, Redux,
             JavaScript, and CSS.
             <br />
@@ -265,6 +293,7 @@ const About = () => {
             }}
           />
         </Box>
+      </Box>
       </Box>
     </PageWrapper>
   );
