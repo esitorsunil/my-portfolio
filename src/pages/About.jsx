@@ -199,9 +199,9 @@ const About = () => {
             sx={{
               border: '2px solid rgb(252, 246, 244)',
               color: 'rgb(252, 246, 244)',
-              padding: '2rem',
-              width: '45vw',
-              height: '60vh',
+              padding: { xs: '1rem', sm: '2rem' },                // smaller padding on mobile
+              width: '45vw' ,                  // wider on mobile
+              height: { xs: 'auto', sm: '60vh' }, 
               zIndex: 3,
               lineHeight: 1.5,
               display: 'flex',

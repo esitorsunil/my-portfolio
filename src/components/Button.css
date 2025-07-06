@@ -33,3 +33,14 @@
   width: 200px;
   height: 200px;
 }
+
+
+
+/* Mobile responsive: Reduce icon size on small screens */
+@media (max-width: 600px) {
+  .custom-btn .icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
