@@ -6,14 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import PageWrapper from '../components/PageWrapper';
 
 const projects = [
-  {
-    title: 'Document Template',
-    description: 'Built a KEKA-style document editor in 3 days during my internship, enabling swift generation of official letters and streamlining HR workflows.',
-    image: '/assests/images/project5.png',
-    tags: ['#React', '#Redux', '#WebEditor', '#Bootstrap'],
-    liveLink: 'https://hrms-document-sunil.netlify.app/',
-    githubLink: 'https://github.com/esitorsunil/keka',
-  },
+  
   {
     title: 'Netflix GPT',
     description: 'AI-powered Netflix interface with real-time movie recommendations and TMDB + OpenAI APIs and multi-lang.',
@@ -22,15 +15,15 @@ const projects = [
     liveLink: 'https://sunny-tanuki-d21a48.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/netflix-gpt',
   },
-
   {
-    title: 'Multi-lang NPM',
-    description: 'Developed and published a React npm package for real-time webpage translation with 100+ language support and original text restoration.',
-    image: '/assests/images/project9.png',
-    tags: ['#React', '#NPMPublish'],
-    liveLink: 'https://multilang-sunil.netlify.app/',
-    githubLink: 'https://www.npmjs.com/package/custom-react-auto-translate-dropdown',
+    title: 'Recipe Finder',
+    description: 'Search and view recipes by ingredients using TheMealDB API.',
+    image: '/assests/images/project3.png',
+    tags: ['#React', '#TheMealDB', '#Responsive', '#Search'],
+    liveLink: 'https://findfood-sunil.netlify.app/',
+    githubLink: 'https://app.netlify.com/projects/findfood-receipe/overview',
   },
+  
 
   {
     title: 'Google Clone',
@@ -49,17 +42,10 @@ const projects = [
     liveLink: 'https://powerlook-sunil.netlify.app/',
     githubLink: 'https://github.com/esitorsunil/ecommercee',
   },
-  {
-    title: 'Recipe Finder',
-    description: 'Search and view recipes by ingredients using TheMealDB API.',
-    image: '/assests/images/project3.png',
-    tags: ['#React', '#TheMealDB', '#Responsive', '#Search'],
-    liveLink: 'https://findfood-sunil.netlify.app/',
-    githubLink: 'https://app.netlify.com/projects/findfood-receipe/overview',
-  },
+  
   {
     title: 'Zoom Task',
-    description: 'Recreated a company-required Zoom task module UI with full dynamic functionality using React within 2 days during my internship.',
+    description: 'Recreated a Zoom task module UI with full dynamic functionality using React.',
     image: '/assests/images/project6.png',
     tags: ['#React', '#Zustand', '#Redux', '#Boostrap'],
     liveLink: 'https://zoom-task-sunil.netlify.app/',
@@ -75,11 +61,27 @@ const projects = [
   },
   {
     title: 'Course Platform',
-    description: 'Crafted a fully responsive course landing interface with adaptive theme toggle within 3 hours.',
+    description: 'Crafted a fully responsive course landing interface with adaptive theme toggle.',
     image: '/assests/images/project8.png',
     tags: ['#HTML', '#CSS'],
     liveLink: 'https://esitorsunil.github.io/landing-page/',
     githubLink: 'https://github.com/esitorsunil/dev-tinder',
+  },
+  {
+    title: 'Document Template',
+    description: 'Developed an interactive UI and API-driven TinyMCE editor to streamline the creation and dispatch of HRMS documents such as hike letters and internal communications, supporting scalable and reusable workflows.',
+    image: '/assests/images/project5.png',
+    tags: ['#React', '#Redux', '#WebEditor', '#Bootstrap'],
+    liveLink: 'https://hrms-document-sunil.netlify.app/',
+    githubLink: 'https://github.com/esitorsunil/keka',
+  },
+  {
+    title: 'Multi-lang NPM',
+    description: 'Developed and published a React npm package for real-time webpage translation with 100+ language support and original text restoration.',
+    image: '/assests/images/project9.png',
+    tags: ['#React', '#NPMPublish'],
+    liveLink: 'https://multilang-sunil.netlify.app/',
+    githubLink: 'https://www.npmjs.com/package/custom-react-auto-translate-dropdown',
   },
   
 ];
